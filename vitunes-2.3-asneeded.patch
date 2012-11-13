@@ -1,0 +1,34 @@
+diff --git a/Makefile.linux b/Makefile.linux
+index 0a13847..642ed1e 100644
+--- a/Makefile.linux
++++ b/Makefile.linux
+@@ -1,9 +1,9 @@
+ # Makefile for linux
+ 
+ # install locations
+-PREFIX?=/usr/local
++PREFIX?=/usr
+ BINDIR=$(PREFIX)/bin
+-MANDIR=$(PREFIX)/man/man1
++MANDIR=$(PREFIX)/share/man/man1
+ 
+ # non-base dependency build info
+ CDEPS=`taglib-config --cflags`
+@@ -12,7 +12,7 @@ LDEPS=`taglib-config --libs` -ltag_c
+ # build info
+ CC?=/usr/bin/cc
+ CFLAGS+=-c -std=gnu99 -D_GNU_SOURCE -Wall -Wextra -Wno-unused-value $(CDEPS) $(CDEBUG)
+-LDFLAGS+=-lm -lncurses -lutil $(LDEPS)
++LIBS=-lm -lncurses -lutil $(LDEPS)
+ 
+ OBJS=commands.o compat.o e_commands.o \
+ 	  keybindings.o medialib.o meta_info.o \
+@@ -27,7 +27,7 @@ VPATH = players
+ .PHONY: debug clean install uninstall publish-repos man-debug
+ 
+ vitunes: $(OBJS)
+-	$(CC) -o $@ $(LDFLAGS) $(OBJS)
++	$(CC) -o $@ $(LDFLAGS) $(OBJS) $(LIBS)
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) $<
