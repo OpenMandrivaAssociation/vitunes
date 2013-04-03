@@ -1,3 +1,5 @@
+%define debug_package %{nil}
+
 Summary:	A curses media indexer and player for vi users
 Name:		vitunes
 Version:	2.3
