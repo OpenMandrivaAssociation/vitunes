@@ -3,7 +3,7 @@
 Summary:	A curses media indexer and player for vi users
 Name:		vitunes
 Version:	2.3
-Release:	10
+Release:	11
 Source0:	http://vitunes.org/files/%{name}-%{version}.tar.gz
 License:	BSD
 Group:		Sound
