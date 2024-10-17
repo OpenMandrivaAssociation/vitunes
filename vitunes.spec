@@ -7,7 +7,7 @@ Release:	11
 Source0:	http://vitunes.org/files/%{name}-%{version}.tar.gz
 License:	BSD
 Group:		Sound
-URL:		http://vitunes.org
+URL:		https://vitunes.org
 Patch0:		vitunes-2.3-time-header.patch
 Patch1:		vitunes-2.3-asneeded.patch
 
