@@ -22,9 +22,7 @@ and playlist manager for *nix whose goals are:
  * quick playlist creation/management.
 
 %prep
-%setup -q
-%patch0 -p1
-%patch1 -p1
+%autosetup -p1
 cp Makefile.linux Makefile
 
 %build
