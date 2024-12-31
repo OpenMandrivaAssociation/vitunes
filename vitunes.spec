@@ -13,6 +13,7 @@ Patch1:		vitunes-2.3-asneeded.patch
 
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(taglib)
+BuildRequires:	pkgconfig(zlib)
 
 %description
 vitunes is a curses-based music player 
