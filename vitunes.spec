@@ -11,6 +11,7 @@ URL:		https://vitunes.org
 Patch0:		vitunes-2.3-time-header.patch
 Patch1:		vitunes-2.3-asneeded.patch
 
+BuildRequires:	make
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(taglib)
 BuildRequires:	pkgconfig(zlib)
